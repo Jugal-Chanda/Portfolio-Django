@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Blogs
+
+<a href="{% url 'blog.create' %}" class="float-right">Create New Blog</a>
+
+{% endblock %}
+
+{% block content %}
+
+{% for blog in blogs %}
+
+<div class="card">
+  <div class="card-header">
+    {{ blog.title }}
+    <a href="{% url 'blog.delete' blog.id %}" class="float-right btn btn-sm btn-danger">Delete blog</a>
+  </div>
+  <div class="card-body">
+    {{ blog.post }}
+
+  </div>
+
+</div>
+
+
+{% endfor %}
+
+{% endblock %}
