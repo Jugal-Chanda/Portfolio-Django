@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'home',
     # 'home.apps.HomeConfig',
     'blog',
+    'projects'
 ]
 
 MIDDLEWARE = [

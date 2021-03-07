@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+Projects
+{% endblock %}
+
+{% block content %}
+
+
+{% for project in projects %}
+<div class="card">
+  <div class="card-header">
+    {{ project.title }}
+  </div>
+  <div class="card-body">
+    {{ project.description }}
+  </div>
+  <div class="card-footer">
+    <a href="{{ project.link }}" target="_blank">Project Link</a>
+  </div>
+
+</div>
+{% endfor %}
+
+
+
+
+{% endblock %}
